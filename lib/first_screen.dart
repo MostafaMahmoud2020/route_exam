@@ -27,13 +27,9 @@ class _FirstScreenState extends State<FirstScreen> {
           onTap: (value) {
             index = value;
             setState(() {});
-            if(index==1){
-
-              //Navigator.pushNamed(context, SecondScreen.routeName);
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => SecondScreen(),));
-
-
+            if(index==1) {
+              //Navigator.pop(context, SecondScreen.routeName);
+              //Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondScreen(),));
             }
           },
           items: const [

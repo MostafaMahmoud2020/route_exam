@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:route_exam/second_screen.dart';
 
 class HomeTab extends StatelessWidget {
   HomeTab({super.key});
@@ -124,10 +125,10 @@ class HomeTab extends StatelessWidget {
             options: CarouselOptions(
               reverse: true,
               autoPlay: true,
-              viewportFraction: 0.9,
+              viewportFraction: 0.8,
               initialPage: 0,
               enableInfiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 5),
+              autoPlayInterval: Duration(seconds: 3),
             ),
           ),
         ),
@@ -141,20 +142,25 @@ class HomeTab extends StatelessWidget {
             SizedBox(
               width: 20,
             ),
-            Row(
-              children: [
-                Text(
-                  "See more",
-                  style: TextStyle(
-                      color: Colors.green,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.green,
-                )
-              ],
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, SecondScreen.routeName);
+              },
+              child: Row(
+                children: [
+                  Text(
+                    "See more",
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.green,
+                  )
+                ],
+              ),
             ),
           ],
         ),
@@ -217,7 +223,7 @@ class HomeTab extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Color.fromRGBO(240, 249, 255, 1),
                     borderRadius: BorderRadius.circular(5)),
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
                   children: [
                     Image.asset("assets/images/Group (2).png"),
