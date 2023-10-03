@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:route_exam/first_screen.dart';
 import 'package:route_exam/second_screen.dart';
+import 'package:route_exam/third_screen.dart';
 
 main() {
   runApp(MyApplication());
@@ -18,6 +19,7 @@ class MyApplication extends StatelessWidget {
       routes: {
         FirstScreen.routeName: (context) => FirstScreen(),
         SecondScreen.routeName: (context) => SecondScreen(),
+        ThirdScreen.routeName: (context) => ThirdScreen(),
       },
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:route_exam/tabs/card_item.dart';
+import 'package:route_exam/third_screen.dart';
 
 class SecondScreen extends StatefulWidget {
   SecondScreen({super.key});
@@ -58,10 +59,15 @@ class _SecondScreenState extends State<SecondScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  const CircleAvatar(
-                    radius: 35,
-                    backgroundImage:
-                        AssetImage("assets/images/leoMessi400.jpg"),
+                  InkWell(
+                    child: CircleAvatar(
+                      radius: 35,
+                      backgroundImage:
+                          AssetImage("assets/images/leoMessi400.jpg"),
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, ThirdScreen.routeName);
+                    },
                   ),
                   const SizedBox(
                     width: 20,

@@ -49,14 +49,9 @@ class _FirstScreenState extends State<FirstScreen> {
         backgroundColor: Colors.white,
         title: Row(
           children: [
-            Stack(
-              children: [
-                Image.asset("assets/images/Vector.png"),
-                const SizedBox(
-                  width: 5,
-                ),
-                Image.asset("assets/images/Vector-1.png"),
-              ],
+            Image.asset("assets/images/logo.png"),
+            const SizedBox(
+              width: 5,
             ),
             const SizedBox(
               width: 10,
@@ -81,7 +76,8 @@ class _FirstScreenState extends State<FirstScreen> {
                   width: 5,
                   height: 5,
                 )),
-                child: const Icon(Icons.notifications, color: Colors.black, size: 40),
+                child: const Icon(Icons.notifications,
+                    color: Colors.black, size: 40),
               ),
             ),
           )
@@ -91,5 +87,5 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 
-  List<Widget> tabs = [HomeTab(), const WidgetTab(), HomeTab(), const WidgetTab()];
+  List<Widget> tabs = [HomeTab(), WidgetTab(), HomeTab(), WidgetTab()];
 }
